@@ -15,8 +15,33 @@ class App extends Component {
     return (
       <main className="App">
         <Header />
-        <Nav />
-        <NoteList />
+        <Route
+          exact
+          path="/"
+          render={(routeProps) => (
+            <Nav {...routeProps} folders={this.state.notes.folders} />
+          )}
+        />
+        <Route
+          path="/folder"
+          render={(routeProps) => (
+            <Nav {...routeProps} folders={this.state.notes.folders} />
+          )}
+        />
+
+        <Route
+          exact
+          path="/"
+          render={(routeProps) => (
+            <NoteList {...routeProps} notes={this.state.notes.notes} />
+          )}
+        />
+        <Route
+          path="/folder/:folderId"
+          render={(routeProps) => (
+            <NoteList {...routeProps} notes={this.state.notes.notes} />
+          )}
+        />
       </main>
     );
   }
