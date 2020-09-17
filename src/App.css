@@ -1,5 +1,7 @@
 .App {
   display: grid;
+  grid-template-columns: 25%;
+  grid-template-rows: repeat();
   grid-template-areas:
     "header header header header"
     "nav main main main";
