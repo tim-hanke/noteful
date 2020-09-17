@@ -7,8 +7,7 @@ export default class NoteList extends Component {
     const { notes } = this.props;
     const { folderId } = this.props.match.params;
     return (
-      <div className="NoteList">
-        <h2>NoteList</h2>
+      <section className="NoteList">
         <ul>
           {notes.map((note) =>
             folderId === note.folderId || folderId === undefined ? (
@@ -18,7 +17,7 @@ export default class NoteList extends Component {
             ) : null
           )}
         </ul>
-      </div>
+      </section>
     );
   }
 }

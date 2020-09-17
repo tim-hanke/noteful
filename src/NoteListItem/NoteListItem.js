@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default class NoteListItem extends Component {
   render() {
-    const { id, name, folderid, content } = this.props.note;
+    const { id, name } = this.props.note;
     const dateModified = new Date(this.props.note.modified);
 
     return (

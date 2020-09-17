@@ -1,0 +1,9 @@
+.Header {
+  height: 3em;
+  text-align: center;
+  grid-area: header;
+}
+
+.Header_Title {
+  font-size: 2em;
+}

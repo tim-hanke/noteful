@@ -1,0 +1,6 @@
+.App {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "nav main main main";
+}

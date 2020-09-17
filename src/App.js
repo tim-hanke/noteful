@@ -6,6 +6,7 @@ import NoteList from "./NoteList/NoteList";
 import notes from "./dummy-store/dummy-store";
 import Note from "./Note/Note";
 import NavNote from "./NavNote/NavNote";
+import "./App.css";
 
 class App extends Component {
   state = {

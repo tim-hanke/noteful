@@ -6,7 +6,9 @@ export default class Header extends Component {
   render() {
     return (
       <div className="Header">
-        <Link to="/">Noteful</Link>
+        <Link to="/" className="Header_Title">
+          Noteful
+        </Link>
       </div>
     );
   }
