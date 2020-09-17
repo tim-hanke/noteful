@@ -4,6 +4,8 @@ import Header from "./Header/Header";
 import Nav from "./Nav/Nav";
 import NoteList from "./NoteList/NoteList";
 import notes from "./dummy-store/dummy-store";
+import Note from "./Note/Note";
+import NavNote from "./NavNote/NavNote";
 
 class App extends Component {
   state = {
@@ -28,6 +30,16 @@ class App extends Component {
             <Nav {...routeProps} folders={this.state.notes.folders} />
           )}
         />
+        <Route
+          path="/note/:noteId"
+          render={(routeProps) => (
+            <NavNote
+              {...routeProps}
+              folders={this.state.notes.folders}
+              notes={this.state.notes.notes}
+            />
+          )}
+        />
 
         <Route
           exact
@@ -40,6 +52,12 @@ class App extends Component {
           path="/folder/:folderId"
           render={(routeProps) => (
             <NoteList {...routeProps} notes={this.state.notes.notes} />
+          )}
+        />
+        <Route
+          path="/note/:noteId"
+          render={(routeProps) => (
+            <Note {...routeProps} notes={this.state.notes.notes} />
           )}
         />
       </main>

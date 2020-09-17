@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./NoteListItem.css";
+import { Link } from "react-router-dom";
 
 export default class NoteListItem extends Component {
   render() {
@@ -8,10 +9,10 @@ export default class NoteListItem extends Component {
 
     return (
       <div className="NoteListItem" key={id}>
-        <h2>{name}</h2>
+        <Link to={"/note/" + id}>{name}</Link>
         <p>
-          Date modified on:{" "}
-          {new Intl.DateTimeFormat("en-GB", {
+          Date modified:{" "}
+          {new Intl.DateTimeFormat("en-US", {
             day: "numeric",
             month: "long",
             year: "numeric",

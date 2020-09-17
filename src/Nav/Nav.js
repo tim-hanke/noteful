@@ -13,9 +13,11 @@ export default class Nav extends Component {
       <section className="Nav">
         <ul className="FolderList">
           {folders.map((folder) => (
-            <NavLink to={"/folder/" + folder.id} key={folder.id}>
-              {folder.name}
-            </NavLink>
+            <li key={folder.id}>
+              <NavLink to={"/folder/" + folder.id} key={folder.id}>
+                {folder.name}
+              </NavLink>
+            </li>
           ))}
         </ul>
         <Link to="/addfolder">Add Folder</Link>

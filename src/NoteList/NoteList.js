@@ -11,7 +11,7 @@ export default class NoteList extends Component {
         <h2>NoteList</h2>
         <ul>
           {notes.map((note) =>
-            folderId === undefined || folderId === note.folderId ? (
+            folderId === note.folderId || folderId === undefined ? (
               <li key={note.id}>
                 <NoteListItem note={note} />
               </li>
